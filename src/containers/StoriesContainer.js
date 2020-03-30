@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getStoryIds } from '../services/hnApi';
+import { getStoryIds, getStory } from '../services/hnApi';
 
 const StoriesContainer = () => {
   const [storyIds, setStoryIds] = useState([]);
