@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { getStory } from '../services/hnApi';
 import {
   StoryWrapper,
@@ -26,7 +26,7 @@ const Story = ({ storyId }) => {
           {story.by}
         </span>
         <span data-testid='story-time'>
-          <StoryMetaElement color='#000'> Posted: </StoryMetaElement>
+          <StoryMetaElement color='#000'> Posted: </StoryMetaElement> {` `}
           {mapTime(story.time)}
         </span>
       </StoryMeta>
