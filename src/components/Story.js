@@ -9,7 +9,7 @@ import {
 } from '../styles/StoryStyles';
 import { mapTime } from '../mappers/mapTime';
 
-const Story = ({ storyId }) => {
+const Story = memo(function Story({ storyId }) {
   const [story, setStory] = useState({});
   useEffect(() => {
     getStory(storyId).then(data => data && data.url && setStory(data));
@@ -32,6 +32,6 @@ const Story = ({ storyId }) => {
       </StoryMeta>
     </StoryWrapper>
   ) : null;
-};
+});
 
 export default Story;
